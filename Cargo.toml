@@ -9,7 +9,7 @@ edition = "2021"
 chrono = { version = "0.4", features = ["serde"] }
 bb8 = "0.7"
 bb8-redis = "0.10.1"
-lazy_static = "1.4.0"
+lazy_static = "1.5.0"
 rand = "0.8"
 redis = { version = "0.21", features = ["tls", "tokio-comp", "tokio-native-tls-comp"] }
 regex = "1.5"
