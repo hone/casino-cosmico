@@ -241,7 +241,7 @@ async fn main() {
 
     let checkin_list_slug =
         env::var("CHECKIN_LIST_SLUG").expect("Expected env variable: CHECKIN_LIST_SLUG");
-    let redis_url = env::var("REDIS_TLS_URL").expect("Expected env variable: REDIS_TLS_URL");
+    let redis_url = env::var("REDIS_URL").expect("Expected env variable: REDIS_URL");
     let discord_token = env::var("DISCORD_TOKEN").expect("Expected env variable: DISCORD_TOKEN");
     let guild_id = GuildId::new(
         env::var("DISCORD_GUILD_ID")
