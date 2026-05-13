@@ -24,9 +24,7 @@ use serenity::{
 use std::{env, sync::Arc};
 use tracing::{error, info, instrument};
 
-const GENERAL_TICKET_SLUG: &str = "Con of Heroes 2025 Ticket";
-const BRANDT_TICKET_SLUG: &str = "Brandt";
-const TICKET_SPOOFER_SLUG: &str = "Ticket spoofer";
+const GENERAL_TICKET_SLUG: &str = "Con of Heroes 2026 Ticket";
 const LOADED_REDIS_KEY: &str = "loaded";
 const RAFFLE_REDIS_KEY: &str = "raffle";
 
@@ -203,7 +201,7 @@ async fn match_subcommand(
                     checkin_list_slug: &type_map_keys::CheckinListSlug::get(&ctx.data).await,
                     loaded_redis_key: LOADED_REDIS_KEY,
                     raffle_redis_key: RAFFLE_REDIS_KEY,
-                    ticket_slugs: [GENERAL_TICKET_SLUG, BRANDT_TICKET_SLUG, TICKET_SPOOFER_SLUG]
+                    ticket_slugs: [GENERAL_TICKET_SLUG]
                         .iter()
                         .map(|s| s.to_string())
                         .collect(),
